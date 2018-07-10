@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="top_rated_menu_name">Top rated</string>
+    <string name="popular_menu_name">Popular</string>
+    <string name="connection_error">You need an internet connection to use this application</string>
+    <string name="movie_poster_content_description">Movie poster</string>
+
+    <string name="details_language">Language</string>
+    <string name="details_vote_average">Vote Average</string>
+    <string name="details_released_on">Released on</string>
+    <string name="details_overview">Overview</string>
+</resources>
