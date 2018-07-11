@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 import odlare.com.movieapp1.BuildConfig;
 
-public class NetworkTopRatedUtility {
+public class NetworkUtility {
 
     public final static String TOP_RATED_BASE_URL = "https://api.themoviedb.org/3/movie/top_rated";
     public final static String POPULAR_BASE_URL = "https://api.themoviedb.org/3/movie/popular";

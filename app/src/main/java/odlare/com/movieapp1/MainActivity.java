@@ -21,7 +21,7 @@ import java.util.List;
 
 import odlare.com.movieapp1.domain.Movie;
 import odlare.com.movieapp1.domain.MovieAdapter;
-import odlare.com.movieapp1.util.NetworkTopRatedUtility;
+import odlare.com.movieapp1.util.NetworkUtility;
 
 public class MainActivity extends AppCompatActivity implements MovieAdapter.MovieAdapterOnClickHandler {
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
 
         recyclerView.setAdapter(movieAdapter);
 
-        new FindMoviesByTopRated().execute(NetworkTopRatedUtility.buildUrl(NetworkTopRatedUtility.TOP_RATED_BASE_URL));
+        new FindMoviesByTopRated().execute(NetworkUtility.buildUrl(NetworkUtility.TOP_RATED_BASE_URL));
 
     }
 
@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
         switch (itemSelected) {
 
             case R.id.popular_menu:
-                new FindMoviesByTopRated().execute(NetworkTopRatedUtility.buildUrl(NetworkTopRatedUtility.POPULAR_BASE_URL));
+                new FindMoviesByTopRated().execute(NetworkUtility.buildUrl(NetworkUtility.POPULAR_BASE_URL));
                 return true;
             case R.id.top_rated_menu:
-                new FindMoviesByTopRated().execute(NetworkTopRatedUtility.buildUrl(NetworkTopRatedUtility.TOP_RATED_BASE_URL));
+                new FindMoviesByTopRated().execute(NetworkUtility.buildUrl(NetworkUtility.TOP_RATED_BASE_URL));
                 return true;
         }
 
@@ -118,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements MovieAdapter.Movi
 
             try {
 
-                String response = NetworkTopRatedUtility.getResponseFromHttpUrl(urls[0]);
+                String response = NetworkUtility.getResponseFromHttpUrl(urls[0]);
                 JSONObject result = new JSONObject(response);
                 JSONArray results = result.getJSONArray("results");
 
